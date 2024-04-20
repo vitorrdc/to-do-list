@@ -1,0 +1,7 @@
+.wrapper {
+  max-width: 50rem;
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  gap: 4rem;
+}

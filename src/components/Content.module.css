@@ -1,0 +1,74 @@
+
+.countTasks{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+}
+
+.createdTasks{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.createdTasksTitle {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--blue)
+}
+
+.countCreatedTasks {
+  font-size: 0.75rem;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+}
+
+.doneTasks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.doneTasksTitle {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--purple)
+}
+
+.countDoneTasks {
+  font-size: 0.75rem;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+}
+
+.taskArea {
+  border-top: 2px solid var(--gray-500);
+  border-radius: 8px 8px 0 0;
+  padding: 4rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.taskArea img {
+  margin: 0 auto;
+  width: 3.5rem;
+
+}
+
+.withoutTasks {
+  margin: 0 auto;
+}
+
+.messageBold {
+  font-weight: bold;
+  color: var(--gray-300);
+}
+
+.messageWithoutBold {
+  color: var(--gray-300);
+}
