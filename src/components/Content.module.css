@@ -46,29 +46,95 @@
   padding: 0.125rem 0.5rem;
 }
 
-.taskArea {
-  border-top: 2px solid var(--gray-500);
-  border-radius: 8px 8px 0 0;
-  padding: 4rem 0;
-  display: grid;
-  gap: 1rem;
+.taskContent {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  margin-bottom: 0.75rem;
+  justify-content: space-between;
 }
 
-.taskArea img {
-  margin: 0 auto;
-  width: 3.5rem;
-
+.taskContent label {
+  display: flex;
+  align-items: flex-start;
 }
 
-.withoutTasks {
-  margin: 0 auto;
+.taskContent button {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.312rem 0.375rem;
 }
 
-.messageBold {
-  font-weight: bold;
-  color: var(--gray-300);
+.taskContent button:hover {
+  background-color: var(--gray-400);
+  border-radius: 8px;
 }
 
-.messageWithoutBold {
-  color: var(--gray-300);
+.taskContent label input[type='checkbox'] {
+  display: none;
 }
+
+.checkbox {
+  border-radius: 100%;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkboxUnchecked {
+  border: 2px solid var(--blue);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+}
+
+.checkboxUnchecked:hover {
+  background-color: rgba(30, 111, 159, 0.2);
+}
+
+.checkboxChecked {
+  border: 2px solid var(--purple-dark);
+  background-color: var(--purple-dark);
+  cursor: pointer;
+  border-radius: 100%;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.checkboxChecked:hover {
+  border: 2px solid var(--purple);
+  background-color: var(--purple);
+}
+
+.paragraph {
+  font-size: 0.875rem;
+  line-height: 140%;
+  padding-left: 0.75rem; 
+  user-select: none;
+  color: var(--gray-100);
+  transition: 0.2s all;
+}
+
+.paragraphChecked {
+  text-decoration: line-through;
+  font-size: 0.875rem;
+  line-height: 140%;
+  padding-left: 0.75rem; 
+  user-select: none;
+  color: var(--gray-100);
+}
+
+
