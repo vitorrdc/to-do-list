@@ -1,7 +1,7 @@
 # To do List!
 
 <h1 align="center">
-  <img alt="Shot Game" title="Shot Game" src="./src/assets/banner-to-do-list.png" />
+  <img alt="To Do List" title="To Do List" src="./src/assets/banner-to-do-list.png" />
 </h1>
 
 > Desafio prático do curso React JS da Rocketseat.
