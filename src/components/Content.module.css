@@ -137,4 +137,8 @@
   color: var(--gray-100);
 }
 
+.content button:hover line, .content button:hover path {
+  fill: var(--danger);
+}
+
 

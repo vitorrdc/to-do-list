@@ -1,8 +1,10 @@
 import { Form } from './components/Form'
 import { Header } from './components/Header'
 import { EmpityTasksMessage } from './components/EmpityTasksMessage'
-import styles from './App.module.css'
 import { Content } from './components/Content'
+
+import styles from './App.module.css'
+
 import { useState } from 'react'
 
 export interface ITask {
@@ -32,12 +34,7 @@ function App() {
           setTasks={setTasks}
         />
         {tasks.length > 0 ? (
-          <Content
-            createdTasks={tasks.length}
-            doneTasks={2}
-            tasks={tasks}
-            setTasks={setTasks}
-          />
+          <Content tasks={tasks} setTasks={setTasks} />
         ) : (
           <EmpityTasksMessage />
         )}

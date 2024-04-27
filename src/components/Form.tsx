@@ -1,6 +1,7 @@
 import styles from './Form.module.css'
 
 import { PlusCircle } from 'lucide-react'
+
 import { ITask } from '../App'
 
 interface FormTypes {
@@ -18,8 +19,13 @@ export function Form({
 }: FormTypes) {
   function handleNewTask(e: React.FormEvent<HTMLButtonElement>) {
     e.preventDefault()
+
+    if (inputValue.length === 0) {
+      return alert('Por favor, preencha o campo de tarefa.')
+    }
+
     const newTask = {
-      id: tasks.length + 1,
+      id: new Date().getTime(),
       text: inputValue,
       isChecked: false,
     }

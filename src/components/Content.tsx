@@ -1,18 +1,15 @@
-import { useState } from 'react'
 import { ITask } from '../App'
+
 import styles from './Content.module.css'
+
 import { Check, Trash2 } from 'lucide-react'
 
 interface ContentType {
-  createdTasks: number
-  doneTasks: number
   tasks: ITask[]
   setTasks: (value: ITask[]) => void
 }
 
-export function Content({ doneTasks, tasks, setTasks }: ContentType) {
-  const [fillOfTrashIcon, setFillOfTrashIcon] = useState<string>('transparent')
-
+export function Content({ tasks, setTasks }: ContentType) {
   function handleCheckedTask(id: number, taskChecked: boolean) {
     const updateData = tasks.map((task) => {
       if (task.id === id) {
@@ -23,6 +20,18 @@ export function Content({ doneTasks, tasks, setTasks }: ContentType) {
     setTasks(updateData)
   }
 
+  function handleDeleteTask(id: number) {
+    const deletedTask = tasks.filter((task) => task.id !== id)
+    setTasks(deletedTask)
+  }
+
+  const doneTask = tasks.reduce((acc, currentTask) => {
+    if (currentTask.isChecked) {
+      return acc + 1
+    }
+    return acc
+  }, 0)
+
   return (
     <div className={styles.content}>
       <div className={styles.countTasks}>
@@ -32,7 +41,9 @@ export function Content({ doneTasks, tasks, setTasks }: ContentType) {
         </div>
         <div className={styles.doneTasks}>
           <span className={styles.doneTasksTitle}>Concluídas</span>
-          <span className={styles.countDoneTasks}>{doneTasks}</span>
+          <span
+            className={styles.countDoneTasks}
+          >{`${doneTask} de ${tasks.length}`}</span>
         </div>
       </div>
       {tasks.map((task) => {
@@ -60,14 +71,8 @@ export function Content({ doneTasks, tasks, setTasks }: ContentType) {
                 {task.text}
               </div>
             </label>
-            <button>
-              <Trash2
-                size={20}
-                color="#808080"
-                onMouseEnter={() => setFillOfTrashIcon('#E25858')}
-                onMouseLeave={() => setFillOfTrashIcon('transparent')}
-                fill={fillOfTrashIcon}
-              />
+            <button onClick={() => handleDeleteTask(task.id)}>
+              <Trash2 size={20} color="#808080" />
             </button>
           </div>
         )
