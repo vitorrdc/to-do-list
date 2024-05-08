@@ -16,7 +16,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 ## 🚀 Instalando To Do List
 
-Para instalar o Shot Game, siga estas etapas:
+Para instalar o To Do List, siga estas etapas:
 
 bash:
 ```
@@ -30,7 +30,7 @@ $ npm install ou yarn install
 
 ## ☕ Usando Shot Game
 
-Para usar Shot Game, siga estas etapas:
+Para usar To Do List, siga estas etapas:
 
 bash:
 ```
